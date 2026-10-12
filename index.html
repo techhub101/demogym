@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORGE ATHLETICS — Built. Not Born. | Elite Performance Facility</title>
+    <meta name="description" content="FORGE ATHLETICS is a world-class strength, conditioning, and athletic performance sanctuary in Mumbai. Built for individuals who refuse average.">
+    <meta name="keywords" content="performance gym mumbai, strength and conditioning, elite athletic training, olympic lifting, hypertrophy coaching bkc">
+
+    <!-- Fonts: Bebas Neue, Syne & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#070709',
+                        'obsidian-soft': '#0e0e12',
+                        'obsidian-card': '#141418',
+                        'obsidian-elevated': '#1c1c22',
+                        concrete: '#27272a',
+                        'concrete-light': '#3f3f46',
+                        'text-muted': '#a1a1aa',
+                        titanium: '#ffffff',
+                        volt: '#d4ff00',
+                        'volt-glow': '#b8e000',
+                        'volt-dark': '#1e2400',
+                        borderline: 'rgba(255, 255, 255, 0.08)',
+                        'borderline-volt': 'rgba(212, 255, 0, 0.3)'
+                    },
+                    fontFamily: {
+                        display: ['"Bebas Neue"', 'sans-serif'],
+                        heavy: ['"Syne"', 'sans-serif'],
+                        sans: ['"Space Grotesk"', 'sans-serif']
+                    },
+                    letterSpacing: {
+                        'ultra-compressed': '-0.04em',
+                        'tight-athletic': '-0.02em',
+                        'wide-military': '0.28em',
+                        'ultra-wide': '0.38em'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Mobile Safe-Area Insets & Fluid Typography */
+        :root {
+            --sat: env(safe-area-inset-top, 0px);
+            --sab: env(safe-area-inset-bottom, 0px);
+            --sal: env(safe-area-inset-left, 0px);
+            --sar: env(safe-area-inset-right, 0px);
+        }
+
+        /* Prevent unwanted mobile tap highlights */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070709;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4ff00;
+        }
+
+        ::selection {
+            background-color: #d4ff00;
+            color: #070709;
+        }
+
+        /* Touch horizontal scroll container helpers */
+        .touch-scroll-x {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .touch-scroll-x::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Fluid clamp hero heading to avoid clipping on screens down to 320px */
+        .hero-headline {
+            font-size: clamp(3.2rem, 14vw, 10.5rem);
+            line-height: 0.88;
+        }
+
+        .section-headline {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            line-height: 0.94;
+        }
+
+        /* Inputs font-size 16px to disable iOS Safari auto-zoom */
+        @media screen and (max-width: 768px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Subtle athletic mesh pattern */
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .bg-stripes-pattern {
+            background: repeating-linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.015),
+                rgba(255, 255, 255, 0.015) 1px,
+                transparent 1px,
+                transparent 12px
+            );
+        }
+
+        /* Scanned tactical crosshair line */
+        .tactical-border {
+            position: relative;
+        }
+        .tactical-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #d4ff00;
+            border-left: 2px solid #d4ff00;
+        }
+        .tactical-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-bottom: 2px solid #d4ff00;
+            border-right: 2px solid #d4ff00;
+        }
+
+        /* Glass Scrolled Navigation */
+        .header-scrolled {
+            background-color: rgba(7, 7, 9, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Marquee ticker animation */
+        @keyframes tickerAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-ticker {
+            display: flex;
+            width: 200%;
+            animation: tickerAnimation 22s linear infinite;
+        }
+        .animate-ticker:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-titanium font-sans antialiased overflow-x-hidden pb-20 md:pb-0 selection:bg-volt selection:text-obsidian">
+
+    <!-- NAVIGATION BAR -->
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-[calc(0.75rem+var(--sat))] pb-3 px-4 sm:px-6 md:px-12 flex items-center justify-between border-b border-transparent">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 bg-volt text-obsidian flex items-center justify-center font-display text-xl sm:text-2xl font-bold tracking-tighter transform -skew-x-12 group-hover:scale-105 transition-transform duration-200">
+                <span class="transform skew-x-12">F</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-display text-xl sm:text-2xl md:text-3xl tracking-wide uppercase leading-none text-titanium group-hover:text-volt transition-colors">
+                    FORGE ATHLETICS
+                </span>
+                <span class="text-[8px] sm:text-[9px] font-sans tracking-wide-military text-text-muted uppercase leading-tight font-medium mt-0.5">
+                    Performance Facility
+                </span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8 text-xs font-semibold tracking-wide uppercase text-titanium/70">
+            <a href="#philosophy" class="hover:text-volt transition-colors">Philosophy</a>
+            <a href="#training" class="hover:text-volt transition-colors">Training</a>
+            <a href="#facility" class="hover:text-volt transition-colors">Facility</a>
+            <a href="#coaches" class="hover:text-volt transition-colors">Coaching</a>
+            <a href="#results" class="hover:text-volt transition-colors">Results</a>
+            <a href="#membership" class="hover:text-volt transition-colors">Membership</a>
+            <a href="#contact" class="hover:text-volt transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="hidden sm:flex items-center space-x-3 md:space-x-4">
+            <button onclick="openTrialModal('7-Day Pass')" class="px-4 md:px-5 py-2.5 bg-transparent border border-white/20 text-titanium hover:border-volt hover:text-volt text-xs font-bold uppercase tracking-wider transition-all transform -skew-x-6 active:scale-95">
+                <span class="inline-block transform skew-x-6">7-Day Trial</span>
+            </button>
+            <button onclick="openMembershipModal('Performance')" class="px-5 md:px-6 py-2.5 bg-volt text-obsidian hover:bg-volt-glow text-xs font-bold uppercase tracking-wider transition-all transform -skew-x-6 shadow-lg shadow-volt/10 active:scale-95">
+                <span class="inline-block transform skew-x-6">Start Training</span>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Toggle with min 48px touch target -->
+        <button id="mobile-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation menu" class="lg:hidden w-12 h-12 flex items-center justify-center text-titanium hover:text-volt active:scale-95 transition-all focus:outline-none -mr-2">
+            <svg id="icon-menu" class="w-7 h-7 stroke-current stroke-2" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg id="icon-close" class="w-7 h-7 stroke-current stroke-2 hidden" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="fixed inset-0 z-40 bg-obsidian/98 backdrop-blur-2xl flex flex-col justify-between px-6 sm:px-8 pt-[calc(5.5rem+var(--sat))] pb-[calc(2rem+var(--sab))] transition-all duration-300 opacity-0 pointer-events-none translate-y-4 lg:hidden overflow-y-auto">
+        <div class="space-y-5">
+            <span class="text-[10px] tracking-wide-military uppercase text-volt font-bold block border-b border-borderline pb-2">Facility Navigation</span>
+            <nav class="flex flex-col space-y-4 font-display text-3xl sm:text-4xl text-titanium uppercase tracking-wider">
+                <a href="#philosophy" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">01. Philosophy</a>
+                <a href="#training" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">02. Training System</a>
+                <a href="#facility" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">03. The Facility</a>
+                <a href="#coaches" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">04. Elite Cadre</a>
+                <a href="#results" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">05. Athlete Results</a>
+                <a href="#membership" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">06. Memberships</a>
+                <a href="#contact" onclick="toggleMobileNav()" class="min-h-[48px] flex items-center hover:text-volt transition-colors active:text-volt">07. Location & Hours</a>
+            </nav>
+        </div>
+        <div class="space-y-3 pt-6 border-t border-borderline mt-6">
+            <button onclick="toggleMobileNav(); openMembershipModal('Performance')" class="w-full min-h-[48px] py-4 bg-volt text-obsidian font-bold text-xs uppercase tracking-wide active:scale-[0.98] transition-transform">
+                Start Training Now
+            </button>
+            <button onclick="toggleMobileNav(); openTrialModal('7-Day Pass')" class="w-full min-h-[48px] py-4 border border-white/20 text-titanium font-bold text-xs uppercase tracking-wide hover:border-volt hover:text-volt active:scale-[0.98] transition-transform">
+                Claim 7-Day Performance Pass
+            </button>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="relative w-full min-h-screen flex items-end pb-14 sm:pb-16 md:pb-24 pt-28 sm:pt-32 px-4 sm:px-6 md:px-12 overflow-hidden bg-obsidian">
+        <!-- Cinematic Video/Photo Background -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2400&q=85" 
+                alt="Forge Athletics Training Floor" 
+                class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-45 scale-105"
+            />
+            <!-- Atmospheric Dark Vignettes & Gradients -->
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/75 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto">
+            <div class="max-w-4xl">
+                <!-- Tactical Eyebrow -->
+                <div class="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-obsidian-card/90 border border-white/10 mb-4 sm:mb-6">
+                    <span class="w-2 h-2 rounded-full bg-volt animate-ping shrink-0"></span>
+                    <span class="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-volt font-semibold truncate">BKC &middot; MUMBAI &middot; 24/7 ELEVATED COMPOUND</span>
+                </div>
+
+                <!-- Giant Athletic Headline (with responsive clamp) -->
+                <h1 class="hero-headline font-display uppercase font-bold tracking-tight mb-6 sm:mb-8 text-titanium">
+                    BUILD WHAT<br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-titanium via-white to-zinc-500">OTHERS</span> 
+                    <span class="text-volt">CAN'T.</span>
+                </h1>
+
+                <!-- Supporting copy -->
+                <p class="text-sm sm:text-lg md:text-xl text-text-muted font-normal max-w-2xl leading-relaxed mb-8 sm:mb-10 tracking-tight">
+                    Strength. Conditioning. Discipline. A performance-focused training environment engineered exclusively for people who refuse average.
+                </p>
+
+                <!-- Action Group -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+                    <button onclick="openMembershipModal('Performance')" class="min-h-[52px] px-8 sm:px-9 py-4 sm:py-5 bg-volt text-obsidian font-display text-xl sm:text-2xl tracking-wider uppercase hover:bg-volt-glow transition-all duration-200 transform -skew-x-6 text-center shadow-xl shadow-volt/20 active:scale-[0.98]">
+                        <span class="inline-block transform skew-x-6">Start Training &rarr;</span>
+                    </button>
+                    <a href="#facility" class="min-h-[52px] flex items-center justify-center px-8 sm:px-9 py-4 sm:py-5 bg-obsidian-card/80 border border-white/15 text-titanium font-display text-xl sm:text-2xl tracking-wider uppercase hover:border-volt hover:text-volt transition-all duration-200 transform -skew-x-6 text-center backdrop-blur-md active:scale-[0.98]">
+                        <span class="inline-block transform skew-x-6">Explore The Facility</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Performance Metrics Ticker/Bar (Responsive 2x2 to 4x1) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-8 pt-8 sm:pt-12 mt-12 sm:mt-16 border-t border-borderline">
+                <div class="tactical-border bg-obsidian-card/40 p-4 sm:p-5 backdrop-blur-sm border border-white/5">
+                    <div class="font-display text-3xl sm:text-4xl md:text-5xl text-titanium font-bold leading-none">500+</div>
+                    <div class="text-[10px] sm:text-[11px] font-mono tracking-wider uppercase text-text-muted mt-1">Active Athletes</div>
+                </div>
+                <div class="tactical-border bg-obsidian-card/40 p-4 sm:p-5 backdrop-blur-sm border border-white/5">
+                    <div class="font-display text-3xl sm:text-4xl md:text-5xl text-titanium font-bold leading-none">12</div>
+                    <div class="text-[10px] sm:text-[11px] font-mono tracking-wider uppercase text-text-muted mt-1">CSCS Coaches</div>
+                </div>
+                <div class="tactical-border bg-obsidian-card/40 p-4 sm:p-5 backdrop-blur-sm border border-white/5">
+                    <div class="font-display text-3xl sm:text-4xl md:text-5xl text-titanium font-bold leading-none">24/7</div>
+                    <div class="text-[10px] sm:text-[11px] font-mono tracking-wider uppercase text-text-muted mt-1">Biometric Keycard</div>
+                </div>
+                <div class="tactical-border bg-obsidian-card/40 p-4 sm:p-5 backdrop-blur-sm border border-white/5">
+                    <div class="font-display text-3xl sm:text-4xl md:text-5xl text-volt font-bold leading-none">ZERO</div>
+                    <div class="text-[10px] sm:text-[11px] font-mono tracking-wider uppercase text-volt mt-1">Tolerance For Average</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PHILOSOPHY / MANIFESTO -->
+    <section id="philosophy" class="py-20 sm:py-24 md:py-36 bg-obsidian px-4 sm:px-6 md:px-12 relative border-b border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                <!-- Large Typography Column -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-3 mb-4">
+                        <span class="w-8 h-[2px] bg-volt"></span>
+                        <span class="text-xs uppercase tracking-wide-military text-volt font-bold">The Forge Manifesto</span>
+                    </div>
+
+                    <h2 class="section-headline font-display uppercase font-bold tracking-tight mb-6 sm:mb-8 text-titanium">
+                        DISCIPLINE IS<br />
+                        <span class="text-volt">THE DIFFERENCE.</span>
+                    </h2>
+
+                    <div class="space-y-5 sm:space-y-6 text-text-muted font-normal text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
+                        <p>
+                            Most gyms are built for retention without progression: rows of cardio machines bathed in soft lighting, personal trainers staring at their phones, and an unspoken agreement that showing up is enough.
+                        </p>
+                        <p class="text-titanium font-medium text-base sm:text-lg md:text-xl border-l-2 border-volt pl-4 sm:pl-5 my-5 sm:my-6 italic">
+                            "Motivation gets you through the first three weeks. Only ruthless, progressive physical discipline builds a body that demands respect."
+                        </p>
+                        <p>
+                            At FORGE, we do not cater to casual gym tourists. We combine Olympic-grade barbell platforms, calibrated Eleiko plates, biomechanically superior pin-loaded machinery, and coaches who coach — not babysit.
+                        </p>
+                    </div>
+
+                    <!-- Core Tenets Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 pt-8 sm:pt-10 mt-8 sm:mt-10 border-t border-borderline">
+                        <div class="p-3 sm:p-0 bg-obsidian-card sm:bg-transparent border border-white/5 sm:border-0">
+                            <span class="font-display text-2xl sm:text-3xl text-titanium block">01 / OVERLOAD</span>
+                            <span class="text-xs text-text-muted uppercase tracking-wider block mt-1">Data-tracked micro-increments in every session.</span>
+                        </div>
+                        <div class="p-3 sm:p-0 bg-obsidian-card sm:bg-transparent border border-white/5 sm:border-0">
+                            <span class="font-display text-2xl sm:text-3xl text-titanium block">02 / BIOMECHANICS</span>
+                            <span class="text-xs text-text-muted uppercase tracking-wider block mt-1">Joint-friendly tension profiles over ego lifting.</span>
+                        </div>
+                        <div class="p-3 sm:p-0 bg-obsidian-card sm:bg-transparent border border-white/5 sm:border-0">
+                            <span class="font-display text-2xl sm:text-3xl text-titanium block">03 / RECOVERY</span>
+                            <span class="text-xs text-text-muted uppercase tracking-wider block mt-1">Cold plunge & infrared contrast protocols included.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Imagery -->
+                <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+                    <div class="aspect-[4/3] sm:aspect-[3/4] relative overflow-hidden bg-obsidian-card border border-white/10 group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Athlete training on rings" 
+                            class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Spec Badge -->
+                        <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-4 sm:p-6 bg-obsidian-soft/95 border border-white/10 backdrop-blur-md">
+                            <span class="text-volt font-mono text-[10px] sm:text-xs uppercase tracking-widest block mb-1">Standard Operating Principle</span>
+                            <p class="font-display text-xl sm:text-2xl uppercase text-titanium">No Loud Music DJs. Just Heavy Iron & Cold Air.</p>
+                            <span class="text-[10px] sm:text-[11px] text-text-muted font-mono block mt-1.5 sm:mt-2">Ambient Temp: 19&deg;C &middot; Air Turnover: 12x/hr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. TRAINING PROGRAMS -->
+    <section id="training" class="py-20 sm:py-24 md:py-36 bg-obsidian-soft px-4 sm:px-6 md:px-12 relative border-b border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-6 border-b border-borderline">
+                <div>
+                    <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-2">The Methodology</span>
+                    <h2 class="section-headline font-display uppercase font-bold tracking-tight text-titanium">Training Disciplines</h2>
+                </div>
+                <p class="text-xs sm:text-sm text-text-muted max-w-md mt-3 sm:mt-4 md:mt-0 font-normal leading-relaxed">
+                    Four periodized pathways engineered by collegiate strength coaches. Every program includes precise load prescriptions and velocity profiling.
+                </p>
+            </div>
+
+            <!-- 4 Editorial Program Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                
+                <!-- 01 STRENGTH -->
+                <div class="bg-obsidian-card p-6 sm:p-8 md:p-10 border border-white/10 hover:border-volt/60 transition-all duration-300 relative group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6 sm:mb-8">
+                            <span class="font-display text-4xl sm:text-5xl text-volt/80 group-hover:text-volt transition-colors">01</span>
+                            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase bg-obsidian-soft px-3 py-1 border border-white/10 text-text-muted">Barbell Mastery</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl uppercase text-titanium mb-3 sm:mb-4 tracking-tight">STRENGTH</h3>
+                        <p class="text-xs sm:text-sm md:text-base text-text-muted leading-relaxed mb-6 sm:mb-8">
+                            Build uncompromising raw power through structured progressive barbell, trap-bar, and Olympic movements. Focus on neural drive, rate of force development (RFD), and structural joint resilience.
+                        </p>
+                        
+                        <div class="space-y-2.5 sm:space-y-3 pt-5 sm:pt-6 border-t border-borderline text-[11px] sm:text-xs font-mono text-text-muted">
+                            <div class="flex justify-between gap-2">
+                                <span>EQUIPMENT:</span>
+                                <span class="text-titanium text-right">Eleiko IPF Calibrated Plates</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>BENCHMARK:</span>
+                                <span class="text-titanium text-right">2.5x BW Squat / 3x Deadlift</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>INTENSITY:</span>
+                                <span class="text-volt text-right">RPE 8.0 &ndash; 9.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-8 pt-5 sm:pt-6">
+                        <button onclick="openProgramDetails('Strength Program')" class="min-h-[48px] w-full py-3.5 bg-obsidian border border-white/20 text-titanium hover:border-volt hover:text-volt text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 active:scale-[0.98]">
+                            <span>Inspect Strength Blueprint</span> &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 02 HYPERTROPHY -->
+                <div class="bg-obsidian-card p-6 sm:p-8 md:p-10 border border-white/10 hover:border-volt/60 transition-all duration-300 relative group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6 sm:mb-8">
+                            <span class="font-display text-4xl sm:text-5xl text-volt/80 group-hover:text-volt transition-colors">02</span>
+                            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase bg-obsidian-soft px-3 py-1 border border-white/10 text-text-muted">Physique Architecture</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl uppercase text-titanium mb-3 sm:mb-4 tracking-tight">HYPERTROPHY</h3>
+                        <p class="text-xs sm:text-sm md:text-base text-text-muted leading-relaxed mb-6 sm:mb-8">
+                            Biomechanically optimized muscle development without joint destruction. Leverage custom resistance curves, lengthened partial overloads, and high-precision converging/diverging machines.
+                        </p>
+                        
+                        <div class="space-y-2.5 sm:space-y-3 pt-5 sm:pt-6 border-t border-borderline text-[11px] sm:text-xs font-mono text-text-muted">
+                            <div class="flex justify-between gap-2">
+                                <span>EQUIPMENT:</span>
+                                <span class="text-titanium text-right">Arsenal & Prime Fitness Line</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>FOCUS:</span>
+                                <span class="text-titanium text-right">Mechanical Tension & Overload</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>INTENSITY:</span>
+                                <span class="text-volt text-right">0 &ndash; 2 RIR (In Reserve)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-8 pt-5 sm:pt-6">
+                        <button onclick="openProgramDetails('Hypertrophy Program')" class="min-h-[48px] w-full py-3.5 bg-obsidian border border-white/20 text-titanium hover:border-volt hover:text-volt text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 active:scale-[0.98]">
+                            <span>Inspect Hypertrophy Blueprint</span> &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 03 CONDITIONING -->
+                <div class="bg-obsidian-card p-6 sm:p-8 md:p-10 border border-white/10 hover:border-volt/60 transition-all duration-300 relative group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6 sm:mb-8">
+                            <span class="font-display text-4xl sm:text-5xl text-volt/80 group-hover:text-volt transition-colors">03</span>
+                            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase bg-obsidian-soft px-3 py-1 border border-white/10 text-text-muted">Metabolic Capacity</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl uppercase text-titanium mb-3 sm:mb-4 tracking-tight">CONDITIONING</h3>
+                        <p class="text-xs sm:text-sm md:text-base text-text-muted leading-relaxed mb-6 sm:mb-8">
+                            Develop a gas tank that outlasts the competition. High-output sprint intervals on curved treadmills, heavy sled turf drags, Concept2 erg fleets, and lactate threshold testing.
+                        </p>
+                        
+                        <div class="space-y-2.5 sm:space-y-3 pt-5 sm:pt-6 border-t border-borderline text-[11px] sm:text-xs font-mono text-text-muted">
+                            <div class="flex justify-between gap-2">
+                                <span>EQUIPMENT:</span>
+                                <span class="text-titanium text-right">Woodway Curve, SkiErg, Echo Bikes</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>ZONE TARGET:</span>
+                                <span class="text-titanium text-right">Zone 2 Base & Zone 5 Sprint</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>ENERGY SYSTEM:</span>
+                                <span class="text-volt text-right">Phosphagen & Glycolytic Capacity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-8 pt-5 sm:pt-6">
+                        <button onclick="openProgramDetails('Conditioning Program')" class="min-h-[48px] w-full py-3.5 bg-obsidian border border-white/20 text-titanium hover:border-volt hover:text-volt text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 active:scale-[0.98]">
+                            <span>Inspect Conditioning Blueprint</span> &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 04 PERSONAL COACHING -->
+                <div class="bg-obsidian-card p-6 sm:p-8 md:p-10 border border-white/10 hover:border-volt/60 transition-all duration-300 relative group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6 sm:mb-8">
+                            <span class="font-display text-4xl sm:text-5xl text-volt/80 group-hover:text-volt transition-colors">04</span>
+                            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase bg-obsidian-soft px-3 py-1 border border-white/10 text-text-muted">1-on-1 Periodization</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl uppercase text-titanium mb-3 sm:mb-4 tracking-tight">PERSONAL COACHING</h3>
+                        <p class="text-xs sm:text-sm md:text-base text-text-muted leading-relaxed mb-6 sm:mb-8">
+                            Dedicated bespoke execution. From blood work interpretation and body composition scans to weekly biomechanics adjustments and customized macro nutrient programming.
+                        </p>
+                        
+                        <div class="space-y-2.5 sm:space-y-3 pt-5 sm:pt-6 border-t border-borderline text-[11px] sm:text-xs font-mono text-text-muted">
+                            <div class="flex justify-between gap-2">
+                                <span>ACCESS:</span>
+                                <span class="text-titanium text-right">Dedicated CSCS Senior Coach</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>CHECK-IN:</span>
+                                <span class="text-titanium text-right">Weekly Video & VBT Profiling</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <span>NUTRITION:</span>
+                                <span class="text-volt text-right">Micronutrient Periodization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-8 pt-5 sm:pt-6">
+                        <button onclick="openTrialModal('1-on-1 Coaching Consultation')" class="min-h-[48px] w-full py-3.5 bg-volt text-obsidian font-bold text-xs uppercase tracking-wider hover:bg-volt-glow transition-colors flex items-center justify-center gap-2 active:scale-[0.98]">
+                            <span>Apply For Coaching Roster</span> &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. THE FACILITY -->
+    <section id="facility" class="py-20 sm:py-24 md:py-36 bg-obsidian px-4 sm:px-6 md:px-12 relative border-b border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
+                <div>
+                    <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-2">18,000 SQ FT IRON TEMPLE</span>
+                    <h2 class="section-headline font-display uppercase font-bold tracking-tight text-titanium">The Facility</h2>
+                </div>
+                <!-- Touch-friendly Zone Filters with horizontal swipe on mobile -->
+                <div class="mt-5 md:mt-0 touch-scroll-x flex gap-2 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+                    <button onclick="filterFacilityZone('all')" id="zone-btn-all" class="zone-tab shrink-0 min-h-[40px] px-4 py-2 text-xs font-mono uppercase bg-volt text-obsidian font-bold transition-all">All Zones</button>
+                    <button onclick="filterFacilityZone('racks')" id="zone-btn-racks" class="zone-tab shrink-0 min-h-[40px] px-4 py-2 text-xs font-mono uppercase bg-obsidian-card border border-white/10 text-text-muted hover:text-white transition-all">Olympic Platforms</button>
+                    <button onclick="filterFacilityZone('machines')" id="zone-btn-machines" class="zone-tab shrink-0 min-h-[40px] px-4 py-2 text-xs font-mono uppercase bg-obsidian-card border border-white/10 text-text-muted hover:text-white transition-all">Arsenal Machines</button>
+                    <button onclick="filterFacilityZone('recovery')" id="zone-btn-recovery" class="zone-tab shrink-0 min-h-[40px] px-4 py-2 text-xs font-mono uppercase bg-obsidian-card border border-white/10 text-text-muted hover:text-white transition-all">Recovery Lab</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Facility Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6" id="facility-grid">
+                
+                <!-- Zone 1 -->
+                <div class="facility-item group relative aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-obsidian-card border border-white/10" data-zone="racks">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=900&q=80" alt="Eleiko Competition Racks" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono text-volt uppercase tracking-widest block mb-1">Zone 01 &middot; Free Weights</span>
+                        <h4 class="font-display text-2xl uppercase text-titanium">10x Eleiko Olympic Racks</h4>
+                        <p class="text-xs text-text-muted mt-1">Calibrated rubber drop mats, urethane dumb-bells up to 70kg, trap bars.</p>
+                    </div>
+                </div>
+
+                <!-- Zone 2 -->
+                <div class="facility-item group relative aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-obsidian-card border border-white/10" data-zone="machines">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80" alt="Arsenal Strength Machinery" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono text-volt uppercase tracking-widest block mb-1">Zone 02 &middot; Hypertrophy</span>
+                        <h4 class="font-display text-2xl uppercase text-titanium">Arsenal & Prime Iso-Lateral</h4>
+                        <p class="text-xs text-text-muted mt-1">Adjustable cam leverage, hack squats, pendulum squats, belt squat station.</p>
+                    </div>
+                </div>
+
+                <!-- Zone 3 -->
+                <div class="facility-item group relative aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-obsidian-card border border-white/10" data-zone="racks">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=900&q=80" alt="Turf Track" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono text-volt uppercase tracking-widest block mb-1">Zone 03 &middot; High Output</span>
+                        <h4 class="font-display text-2xl uppercase text-titanium">45M Sprint & Sled Turf</h4>
+                        <p class="text-xs text-text-muted mt-1">Heavy sled lanes, medicine ball concrete target walls, farmer walk track.</p>
+                    </div>
+                </div>
+
+                <!-- Zone 4 -->
+                <div class="facility-item group relative aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-obsidian-card border border-white/10" data-zone="recovery">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Recovery Lab" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono text-volt uppercase tracking-widest block mb-1">Zone 04 &middot; Recovery</span>
+                        <h4 class="font-display text-2xl uppercase text-titanium">3°C Cold Plunge & Finnish Sauna</h4>
+                        <p class="text-xs text-text-muted mt-1">Contrast therapy baths, Normatec 3 compression suites, Hyperice percussion.</p>
+                    </div>
+                </div>
+
+                <!-- Zone 5 -->
+                <div class="facility-item group relative aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-obsidian-card border border-white/10" data-zone="machines">
+                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=900&q=80" alt="Cardio & Erg Fleet" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono text-volt uppercase tracking-widest block mb-1">Zone 05 &middot; Erg Fleet</span>
+                        <h4 class="font-display text-2xl uppercase text-titanium">Concept2 & Woodway Fleet</h4>
+                        <p class="text-xs text-text-muted mt-1">16x RowErgs, SkiErgs, BikeErgs and motorless curved sprint treadmills.</p>
+                    </div>
+                </div>
+
+                <!-- Zone 6 -->
+                <div class="facility-item group relative aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-obsidian-card border border-white/10" data-zone="recovery">
+                    <img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?auto=format&fit=crop&w=900&q=80" alt="Locker Suites" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono text-volt uppercase tracking-widest block mb-1">Zone 06 &middot; Hospitality</span>
+                        <h4 class="font-display text-2xl uppercase text-titanium">Locker & Rain Shower Suites</h4>
+                        <p class="text-xs text-text-muted mt-1">Aesop amenities, private lockers, towel service, and electrolyte bar.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. COACHES (ELITE CADRE) -->
+    <section id="coaches" class="py-20 sm:py-24 md:py-36 bg-obsidian-soft px-4 sm:px-6 md:px-12 relative border-b border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-6 border-b border-borderline">
+                <div>
+                    <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-2">CSCS &middot; USAW &middot; EXOS CERTIFIED</span>
+                    <h2 class="section-headline font-display uppercase font-bold tracking-tight text-titanium">The Coaching Cadre</h2>
+                </div>
+                <p class="text-xs sm:text-sm text-text-muted max-w-sm mt-3 sm:mt-4 md:mt-0 font-normal leading-relaxed">
+                    No inexperienced floor staff. Every coach has competed or managed collegiate/national tier athletes for 6+ years.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                
+                <!-- Coach 1 -->
+                <div class="group bg-obsidian-card border border-white/10 hover:border-volt/60 transition-all duration-300 p-4 sm:p-5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-obsidian mb-4 sm:mb-5 relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=80" 
+                            alt="Arjun Mehta" 
+                            class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute top-3 left-3 bg-obsidian/90 border border-white/10 px-2 py-1 text-[10px] font-mono text-volt uppercase">
+                            Lead Strength
+                        </div>
+                    </div>
+                    <h3 class="font-display text-2xl sm:text-3xl uppercase text-titanium">ARJUN MEHTA</h3>
+                    <p class="text-xs uppercase font-mono text-volt tracking-wider mb-2 sm:mb-3">Head of Strength & Periodization</p>
+                    <p class="text-xs text-text-muted leading-relaxed mb-5 sm:mb-6 font-normal">
+                        Former National Powerlifting Team Director. Specialized in mechanical torque optimization and sub-maximal loading cycles.
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-borderline flex items-center justify-between text-xs">
+                        <span class="text-[11px] font-mono text-text-muted">CSCS / USAW-2</span>
+                        <button onclick="openCoachBooking('Arjun Mehta')" class="min-h-[44px] flex items-center text-volt font-bold hover:underline active:opacity-75">Book Roster &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Coach 2 -->
+                <div class="group bg-obsidian-card border border-white/10 hover:border-volt/60 transition-all duration-300 p-4 sm:p-5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-obsidian mb-4 sm:mb-5 relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80" 
+                            alt="Nikhil Shah" 
+                            class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute top-3 left-3 bg-obsidian/90 border border-white/10 px-2 py-1 text-[10px] font-mono text-volt uppercase">
+                            Performance
+                        </div>
+                    </div>
+                    <h3 class="font-display text-2xl sm:text-3xl uppercase text-titanium">NIKHIL SHAH</h3>
+                    <p class="text-xs uppercase font-mono text-volt tracking-wider mb-2 sm:mb-3">Athletic Mobility & Velocity</p>
+                    <p class="text-xs text-text-muted leading-relaxed mb-5 sm:mb-6 font-normal">
+                        EXOS Performance Specialist. Works with Ranji cricket and ISL football athletes on sprint biomechanics and hip capsule longevity.
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-borderline flex items-center justify-between text-xs">
+                        <span class="text-[11px] font-mono text-text-muted">EXOS-XPS / FMS</span>
+                        <button onclick="openCoachBooking('Nikhil Shah')" class="min-h-[44px] flex items-center text-volt font-bold hover:underline active:opacity-75">Book Roster &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Coach 3 -->
+                <div class="group bg-obsidian-card border border-white/10 hover:border-volt/60 transition-all duration-300 p-4 sm:p-5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-obsidian mb-4 sm:mb-5 relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80" 
+                            alt="Riya Kapoor" 
+                            class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute top-3 left-3 bg-obsidian/90 border border-white/10 px-2 py-1 text-[10px] font-mono text-volt uppercase">
+                            Hypertrophy
+                        </div>
+                    </div>
+                    <h3 class="font-display text-2xl sm:text-3xl uppercase text-titanium">RIYA KAPOOR</h3>
+                    <p class="text-xs uppercase font-mono text-volt tracking-wider mb-2 sm:mb-3">Hypertrophy & Physique Architecture</p>
+                    <p class="text-xs text-text-muted leading-relaxed mb-5 sm:mb-6 font-normal">
+                        Master in Exercise Physiology. Pioneer in lengthened-state training, precision hypertrophy, and metabolic diet periodization.
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-borderline flex items-center justify-between text-xs">
+                        <span class="text-[11px] font-mono text-text-muted">M.Sc ExPhys / CISSN</span>
+                        <button onclick="openCoachBooking('Riya Kapoor')" class="min-h-[44px] flex items-center text-volt font-bold hover:underline active:opacity-75">Book Roster &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Coach 4 -->
+                <div class="group bg-obsidian-card border border-white/10 hover:border-volt/60 transition-all duration-300 p-4 sm:p-5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-obsidian mb-4 sm:mb-5 relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" 
+                            alt="Daniel Reed" 
+                            class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute top-3 left-3 bg-obsidian/90 border border-white/10 px-2 py-1 text-[10px] font-mono text-volt uppercase">
+                            Conditioning
+                        </div>
+                    </div>
+                    <h3 class="font-display text-2xl sm:text-3xl uppercase text-titanium">DANIEL REED</h3>
+                    <p class="text-xs uppercase font-mono text-volt tracking-wider mb-2 sm:mb-3">Conditioning & Work Capacity</p>
+                    <p class="text-xs text-text-muted leading-relaxed mb-5 sm:mb-6 font-normal">
+                        Collegiate rugby strength coach. Designs the punishing energy system protocols and sled endurance blocks inside FORGE.
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-borderline flex items-center justify-between text-xs">
+                        <span class="text-[11px] font-mono text-text-muted">CSCS / UKSCA</span>
+                        <button onclick="openCoachBooking('Daniel Reed')" class="min-h-[44px] flex items-center text-volt font-bold hover:underline active:opacity-75">Book Roster &rarr;</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. RESULTS / MEMBER ARCHIVE -->
+    <section id="results" class="py-20 sm:py-24 md:py-36 bg-obsidian px-4 sm:px-6 md:px-12 relative border-b border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-6 border-b border-borderline">
+                <div>
+                    <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-2">Verified Progression</span>
+                    <h2 class="section-headline font-display uppercase font-bold tracking-tight text-titanium">Athlete Case Studies</h2>
+                </div>
+                <p class="text-xs sm:text-sm text-text-muted max-w-sm mt-3 sm:mt-4 md:mt-0 font-normal">
+                    Real data. No fake lighting tricks. Every athlete logs every session in our internal analytics software.
+                </p>
+            </div>
+
+            <!-- Case Study Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Story 1 -->
+                <div class="bg-obsidian-card p-5 sm:p-6 md:p-8 border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden bg-obsidian mb-5 sm:mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="Vikramaditya Rao" class="w-full h-full object-cover filter grayscale contrast-125">
+                            <span class="absolute top-2.5 right-2.5 bg-obsidian/90 text-volt text-[9px] sm:text-[10px] font-mono px-2 py-0.5 border border-volt/30">
+                                24 WEEKS PROGRESSION
+                            </span>
+                        </div>
+                        <h4 class="font-display text-2xl uppercase text-titanium">Vikramaditya Rao</h4>
+                        <p class="text-xs font-mono text-text-muted mb-4">Founder / Venture Capitalist &middot; Age 34</p>
+                        
+                        <div class="grid grid-cols-3 gap-1.5 sm:gap-2 py-3 mb-4 bg-obsidian-soft border border-white/5 text-center font-mono">
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">DEADLIFT</span>
+                                <span class="text-xs sm:text-sm font-bold text-volt">140 &rarr; 225kg</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">BODY FAT</span>
+                                <span class="text-xs sm:text-sm font-bold text-titanium">22% &rarr; 13%</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">REST HR</span>
+                                <span class="text-xs sm:text-sm font-bold text-titanium">68 &rarr; 51 bpm</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-text-muted leading-relaxed italic">
+                            "60-hour work weeks used to leave me drained. Arjun rebuilt my spinal stability and programmed around my travel schedule. I am significantly stronger at 34 than I ever was at 22."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="bg-obsidian-card p-5 sm:p-6 md:p-8 border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden bg-obsidian mb-5 sm:mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=800&q=80" alt="Tara Sen" class="w-full h-full object-cover filter grayscale contrast-125">
+                            <span class="absolute top-2.5 right-2.5 bg-obsidian/90 text-volt text-[9px] sm:text-[10px] font-mono px-2 py-0.5 border border-volt/30">
+                                16 WEEKS PROGRESSION
+                            </span>
+                        </div>
+                        <h4 class="font-display text-2xl uppercase text-titanium">Tara Sen</h4>
+                        <p class="text-xs font-mono text-text-muted mb-4">Corporate Lawyer &middot; Age 29</p>
+                        
+                        <div class="grid grid-cols-3 gap-1.5 sm:gap-2 py-3 mb-4 bg-obsidian-soft border border-white/5 text-center font-mono">
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">SQUAT</span>
+                                <span class="text-xs sm:text-sm font-bold text-volt">50 &rarr; 115kg</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">VO2 MAX</span>
+                                <span class="text-xs sm:text-sm font-bold text-titanium">38 &rarr; 49 ml</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">PULL-UPS</span>
+                                <span class="text-xs sm:text-sm font-bold text-titanium">0 &rarr; 8 Strict</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-text-muted leading-relaxed italic">
+                            "I spent years doing generic boutique fitness classes that burned calories but gave zero strength. Riya taught me mechanical leverage and heavy loading without fearing bulk."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="bg-obsidian-card p-5 sm:p-6 md:p-8 border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden bg-obsidian mb-5 sm:mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=800&q=80" alt="Aman Khurana" class="w-full h-full object-cover filter grayscale contrast-125">
+                            <span class="absolute top-2.5 right-2.5 bg-obsidian/90 text-volt text-[9px] sm:text-[10px] font-mono px-2 py-0.5 border border-volt/30">
+                                32 WEEKS PROGRESSION
+                            </span>
+                        </div>
+                        <h4 class="font-display text-2xl uppercase text-titanium">Aman Khurana</h4>
+                        <p class="text-xs font-mono text-text-muted mb-4">Software Architect &middot; Age 37</p>
+                        
+                        <div class="grid grid-cols-3 gap-1.5 sm:gap-2 py-3 mb-4 bg-obsidian-soft border border-white/5 text-center font-mono">
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">2K ROW</span>
+                                <span class="text-xs sm:text-sm font-bold text-volt">7:18 &rarr; 6:24</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">LEAN MASS</span>
+                                <span class="text-xs sm:text-sm font-bold text-titanium">+4.8 kg</span>
+                            </div>
+                            <div>
+                                <span class="text-[9px] sm:text-[10px] text-text-muted block truncate">SHOULDER</span>
+                                <span class="text-xs sm:text-sm font-bold text-titanium">Zero Pain</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-text-muted leading-relaxed italic">
+                            "The contrast therapy and Erg conditioning protocols overhauled my endurance ceiling. The community inside FORGE holds you accountable every single dawn."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. MEMBERSHIP TIERS -->
+    <section id="membership" class="py-20 sm:py-24 md:py-36 bg-obsidian-soft px-4 sm:px-6 md:px-12 relative border-b border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-3">Commitment Structure</span>
+                <h2 class="section-headline font-display uppercase font-bold tracking-tight text-titanium">Invest In Capability</h2>
+                <p class="text-xs sm:text-sm md:text-base text-text-muted mt-3 sm:mt-4 leading-relaxed font-normal">
+                    Strict membership caps maintained at all times. We never oversubscribe our floor space to guarantee barbell and platform availability.
+                </p>
+
+                <!-- Billing Cycle Switcher with 48px touch targets -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-3 bg-obsidian p-1 sm:p-1.5 border border-white/10 mt-6 sm:mt-8">
+                    <button onclick="setBillingCycle('monthly')" id="bill-monthly" class="min-h-[44px] px-4 sm:px-5 py-2 text-xs font-mono uppercase bg-volt text-obsidian font-bold transition-all active:scale-95">Monthly</button>
+                    <button onclick="setBillingCycle('quarterly')" id="bill-quarterly" class="min-h-[44px] px-4 sm:px-5 py-2 text-xs font-mono uppercase text-text-muted hover:text-white transition-all active:scale-95">Quarterly (-15%)</button>
+                </div>
+            </div>
+
+            <!-- 3 Pricing Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+                
+                <!-- TIER 1: STARTER -->
+                <div class="bg-obsidian-card p-6 sm:p-8 md:p-10 border border-white/10 flex flex-col justify-between relative order-2 lg:order-1">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-mono uppercase tracking-widest text-text-muted">Tier 01</span>
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 border border-white/10 text-text-muted">Standard</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl uppercase text-titanium mb-2">STARTER</h3>
+                        <p class="text-xs text-text-muted mb-6">Foundational training access for dedicated disciplined individuals.</p>
+                        
+                        <div class="flex items-baseline gap-1 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-borderline">
+                            <span class="font-display text-4xl sm:text-5xl text-titanium price-val" data-monthly="2,499" data-quarterly="2,124">₹2,499</span>
+                            <span class="text-xs font-mono text-text-muted">/ month</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-text-muted">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Off-peak facility access (11 AM – 5 PM, 9 PM – 6 AM)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Free weights & Olympic platforms zone</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Forge Athletics Athlete iOS/Android logging app</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Initial Biometric DEXA body scan baseline</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-white/30">
+                                <span class="font-mono mt-0.5">&times;</span>
+                                <span>24/7 Peak hours access</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-white/30">
+                                <span class="font-mono mt-0.5">&times;</span>
+                                <span>Recovery Lab (Cold Plunge & Sauna)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 sm:mt-10 pt-5 sm:pt-6">
+                        <button onclick="openMembershipModal('Starter')" class="min-h-[48px] w-full py-3.5 bg-obsidian border border-white/20 text-titanium hover:border-volt hover:text-volt font-bold text-xs uppercase tracking-wider transition-colors active:scale-[0.98]">
+                            Select Starter Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TIER 2: PERFORMANCE (FEATURED) -->
+                <div class="bg-obsidian-elevated p-6 sm:p-8 md:p-10 border-2 border-volt shadow-2xl shadow-volt/10 flex flex-col justify-between relative transform lg:-translate-y-4 order-1 lg:order-2">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-volt text-obsidian font-mono text-[9px] sm:text-[10px] font-bold tracking-widest uppercase px-3 sm:px-4 py-1 whitespace-nowrap">
+                        MOST POPULAR &middot; ATHLETE STANDARD
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between items-center mb-4 pt-1 sm:pt-0">
+                            <span class="text-xs font-mono uppercase tracking-widest text-volt">Tier 02</span>
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-volt/20 text-volt border border-volt/40">Full Access</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl uppercase text-titanium mb-2">PERFORMANCE</h3>
+                        <p class="text-xs text-text-muted mb-6">Unrestricted 24/7 compound access + Recovery suite + monthly check-ins.</p>
+                        
+                        <div class="flex items-baseline gap-1 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-borderline">
+                            <span class="font-display text-4xl sm:text-5xl text-volt price-val" data-monthly="4,999" data-quarterly="4,249">₹4,999</span>
+                            <span class="text-xs font-mono text-text-muted">/ month</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-titanium/90">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span><strong>24/7/365 Biometric Keycard access</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Unrestricted access across all 6 training zones</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span><strong>Cold Plunge & Finnish Sauna access (Daily)</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Monthly 1-on-1 velocity & strength assessment</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Squad conditioning & turf interval classes</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Executive locker suite & Aesop amenities</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 sm:mt-10 pt-5 sm:pt-6">
+                        <button onclick="openMembershipModal('Performance')" class="min-h-[48px] w-full py-4 bg-volt text-obsidian hover:bg-volt-glow font-bold text-xs uppercase tracking-wider transition-colors shadow-lg shadow-volt/20 active:scale-[0.98]">
+                            Claim Performance Tier &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TIER 3: ELITE -->
+                <div class="bg-obsidian-card p-6 sm:p-8 md:p-10 border border-white/10 flex flex-col justify-between relative order-3">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-mono uppercase tracking-widest text-text-muted">Tier 03</span>
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 border border-white/10 text-text-muted">Concierge</span>
+                        </div>
+                        <h3 class="font-display text-3xl sm:text-4xl uppercase text-titanium mb-2">ELITE</h3>
+                        <p class="text-xs text-text-muted mb-6">The ultimate turnkey strength & physique transformation partnership.</p>
+                        
+                        <div class="flex items-baseline gap-1 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-borderline">
+                            <span class="font-display text-4xl sm:text-5xl text-titanium price-val" data-monthly="8,999" data-quarterly="7,649">₹8,999</span>
+                            <span class="text-xs font-mono text-text-muted">/ month</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-text-muted">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>All Performance Tier privileges included</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span><strong>Assigned 1-on-1 CSCS Senior Coach</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Weekly custom periodized training adjustments</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Personalized daily nutrition & blood panel reviews</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Dedicated private kit locker with daily laundry</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-volt font-mono font-bold mt-0.5">&check;</span>
+                                <span>Unlimited Normatec compression & plunge access</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 sm:mt-10 pt-5 sm:pt-6">
+                        <button onclick="openMembershipModal('Elite')" class="min-h-[48px] w-full py-3.5 bg-obsidian border border-white/20 text-titanium hover:border-volt hover:text-volt font-bold text-xs uppercase tracking-wider transition-colors active:scale-[0.98]">
+                            Select Elite Plan
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. 7-DAY CHALLENGE / CONVERSION SECTION -->
+    <section class="py-20 sm:py-24 md:py-32 bg-obsidian px-4 sm:px-6 md:px-12 relative overflow-hidden border-b border-borderline">
+        <div class="absolute inset-0 bg-stripes-pattern opacity-40"></div>
+        <div class="relative z-10 max-w-5xl mx-auto bg-obsidian-card border border-volt/40 p-6 sm:p-12 md:p-16 text-center">
+            
+            <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-3 sm:mb-4">Zero Commitment Trial</span>
+            <h2 class="section-headline font-display uppercase text-titanium leading-none tracking-tight mb-5 sm:mb-6">
+                YOUR EXCUSES DON'T NEED<br />
+                <span class="text-volt">A MEMBERSHIP.</span>
+            </h2>
+            
+            <p class="text-xs sm:text-base text-text-muted max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
+                Experience FORGE for 7 consecutive days. Access every barbell platform, recovery plunge, and turf track. Discover what structured training under real standards feels like.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+                <button onclick="openTrialModal('7-Day Challenge')" class="min-h-[50px] w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-volt text-obsidian font-display text-xl sm:text-2xl uppercase tracking-wider hover:bg-volt-glow transition-all transform -skew-x-6 shadow-xl shadow-volt/20 active:scale-[0.98]">
+                    <span class="inline-block transform skew-x-6">CLAIM YOUR 7 DAYS &rarr;</span>
+                </button>
+                <a href="#membership" class="min-h-[50px] flex items-center justify-center w-full sm:w-auto px-7 sm:px-8 py-4 sm:py-5 border border-white/20 text-titanium font-display text-xl sm:text-2xl uppercase tracking-wider hover:border-volt hover:text-volt transition-all transform -skew-x-6 active:scale-[0.98]">
+                    <span class="inline-block transform skew-x-6">Compare Memberships</span>
+                </a>
+            </div>
+
+            <p class="text-[10px] sm:text-[11px] font-mono text-text-muted mt-5 sm:mt-6">
+                *Requires valid government ID. One trial per athlete. Zero automated recurring billing.
+            </p>
+        </div>
+    </section>
+
+    <!-- 9. SOCIAL PROOF / ATHLETES IN ACTION -->
+    <section class="py-16 sm:py-20 bg-obsidian-soft overflow-hidden border-b border-borderline">
+        <div class="px-4 sm:px-6 md:px-12 mb-6 sm:mb-8 flex justify-between items-end max-w-7xl mx-auto">
+            <div>
+                <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-1">Live Feed</span>
+                <h3 class="font-display text-2xl sm:text-3xl uppercase text-titanium">Athletes In Action &middot; @FORGE.ATHLETICS</h3>
+            </div>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-xs font-mono text-volt uppercase hover:underline hidden sm:block">Follow The Compound &rarr;</a>
+        </div>
+
+        <!-- Smooth Ticker Gallery -->
+        <div class="relative w-full overflow-hidden">
+            <div class="animate-ticker space-x-3 sm:space-x-4">
+                <!-- Group 1 -->
+                <div class="flex space-x-3 sm:space-x-4 shrink-0">
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Training" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Heavy Sled" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Iron Plates" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Barbell Squat" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Cold Plunge" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                </div>
+
+                <!-- Group 2 (Clone for infinite seamless loop) -->
+                <div class="flex space-x-3 sm:space-x-4 shrink-0">
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Training" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Heavy Sled" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Iron Plates" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Barbell Squat" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="w-52 sm:w-64 h-64 sm:h-80 bg-obsidian overflow-hidden border border-white/10 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Cold Plunge" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FINAL CTA -->
+    <section class="py-20 sm:py-28 md:py-40 bg-obsidian px-4 sm:px-6 md:px-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-25"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="text-xs uppercase tracking-wide-military text-volt font-bold block mb-4">No Tomorrow. Only Today.</span>
+            
+            <h2 class="hero-headline font-display uppercase font-bold text-titanium tracking-tight mb-6 sm:mb-8">
+                STOP WAITING.<br />
+                <span class="text-volt">START BUILDING.</span>
+            </h2>
+
+            <p class="text-sm sm:text-lg md:text-xl text-text-muted max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed font-normal">
+                Join Mumbai's most uncompromising athletic brotherhood. Your first assessment begins the moment you enter.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+                <button onclick="openMembershipModal('Performance')" class="min-h-[50px] w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-volt text-obsidian font-display text-xl sm:text-2xl uppercase tracking-wider hover:bg-volt-glow transition-all transform -skew-x-6 shadow-xl shadow-volt/20 active:scale-[0.98]">
+                    <span class="inline-block transform skew-x-6">START TRAINING &rarr;</span>
+                </button>
+                <button onclick="openTrialModal('Tour Request')" class="min-h-[50px] w-full sm:w-auto px-8 sm:px-9 py-4 sm:py-5 border border-white/20 text-titanium font-display text-xl sm:text-2xl uppercase tracking-wider hover:border-volt hover:text-volt transition-all transform -skew-x-6 active:scale-[0.98]">
+                    <span class="inline-block transform skew-x-6">Book Facility Tour</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer id="contact" class="bg-obsidian-soft text-text-muted pt-16 sm:pt-20 pb-12 px-4 sm:px-6 md:px-12 border-t border-borderline">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 mb-12 sm:mb-16">
+                <!-- Brand col -->
+                <div class="sm:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-7 h-7 bg-volt text-obsidian flex items-center justify-center font-display text-xl font-bold transform -skew-x-12">
+                            <span class="transform skew-x-12">F</span>
+                        </div>
+                        <span class="font-display text-2xl text-titanium tracking-wide">FORGE ATHLETICS</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-wide-military text-volt font-bold mb-3 sm:mb-4">BUILT. NOT BORN.</p>
+                    <p class="text-xs text-text-muted leading-relaxed max-w-sm font-normal">
+                        A dedicated high-performance strength, conditioning, and athletic recovery sanctuary. 18,000 square feet engineered strictly for high-standard progression.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-titanium mb-4">Compound</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#philosophy" class="hover:text-volt transition-colors py-1 inline-block">Philosophy</a></li>
+                        <li><a href="#training" class="hover:text-volt transition-colors py-1 inline-block">Training Programs</a></li>
+                        <li><a href="#facility" class="hover:text-volt transition-colors py-1 inline-block">Facility Specs</a></li>
+                        <li><a href="#coaches" class="hover:text-volt transition-colors py-1 inline-block">Coaching Cadre</a></li>
+                        <li><a href="#results" class="hover:text-volt transition-colors py-1 inline-block">Member Archive</a></li>
+                        <li><a href="#membership" class="hover:text-volt transition-colors py-1 inline-block">Membership Tiers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-titanium mb-4">Direct Contact</h4>
+                    <ul class="space-y-2.5 text-xs font-mono">
+                        <li>
+                            <a href="tel:+912284920088" class="hover:text-volt transition-colors flex items-center gap-2 py-1">
+                                <span class="text-volt">&bull;</span> +91 (022) 8492 0088
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/912284920088" target="_blank" rel="noopener" class="hover:text-volt transition-colors flex items-center gap-2 py-1">
+                                <span class="text-volt">&bull;</span> WhatsApp Athlete Desk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:performance@forgeathletics.in" class="hover:text-volt transition-colors flex items-center gap-2 py-1">
+                                <span class="text-volt">&bull;</span> desk@forgeathletics.in
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="hover:text-volt transition-colors flex items-center gap-2 py-1">
+                                <span class="text-volt">&bull;</span> @forge.athletics
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Facility Hours & Location -->
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-titanium mb-4">Compound Location</h4>
+                    <p class="text-xs text-text-muted mb-3 font-normal">
+                        Plot C-22, G Block,<br>
+                        Bandra Kurla Complex (BKC),<br>
+                        Mumbai, Maharashtra 400051
+                    </p>
+                    <div class="p-3 bg-obsidian border border-white/10">
+                        <span class="text-[10px] font-mono uppercase text-volt block font-bold">OPERATING HOURS</span>
+                        <span class="text-xs font-display text-titanium tracking-wider">24 HOURS &middot; 7 DAYS A WEEK</span>
+                        <span class="text-[10px] text-text-muted block mt-0.5">Biometric Gate Active 24/7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Legal -->
+            <div class="pt-8 border-t border-borderline flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-text-muted/60">
+                <p>&copy; 2026 FORGE ATHLETICS INC. ALL RIGHTS RESERVED.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0 text-[11px]">
+                    <a href="#hero" class="hover:text-volt transition-colors">TERMS OF ATHLETIC SERVICE</a>
+                    <a href="#hero" class="hover:text-volt transition-colors">PRIVACY POLICY</a>
+                    <a href="#hero" class="hover:text-volt transition-colors">SAFETY CODE</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SLEEK MOBILE STICKY BOTTOM QUICK-ACTION DOCK -->
+    <div id="mobile-dock" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-obsidian/95 backdrop-blur-xl border-t border-white/10 px-4 py-2.5 pb-[calc(0.6rem+var(--sab))] transition-transform duration-300 translate-y-full">
+        <div class="flex items-center gap-2.5">
+            <button onclick="openTrialModal('7-Day Mobile Pass')" class="flex-1 min-h-[46px] bg-volt text-obsidian font-display text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform">
+                <span>CLAIM 7-DAY PASS</span>
+                <span class="text-sm">&rarr;</span>
+            </button>
+            <a href="tel:+912284920088" aria-label="Call Forge Athletics Studio" class="w-12 h-[46px] bg-obsidian-card border border-white/15 text-titanium flex items-center justify-center hover:text-volt active:scale-95 transition-all">
+                <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE MEMBERSHIP & 7-DAY TRIAL MODAL -->
+    <div id="modal-overlay" class="fixed inset-0 bg-obsidian/85 backdrop-blur-md z-50 transition-opacity duration-300 opacity-0 pointer-events-none" onclick="closeAllModals()"></div>
+
+    <div id="action-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-xl bg-obsidian-card border border-white/15 p-5 sm:p-8 md:p-10 z-50 shadow-2xl transition-all duration-300 opacity-0 pointer-events-none scale-95 max-h-[88vh] overflow-y-auto">
+        
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-borderline pb-4 sm:pb-5 mb-5 sm:mb-6">
+            <div>
+                <span class="text-[10px] font-mono tracking-wide-military uppercase text-volt font-bold block" id="modal-eyebrow">ATHLETE ADMISSION</span>
+                <h3 class="font-display text-2xl sm:text-3xl md:text-4xl uppercase text-titanium" id="modal-title">START TRAINING</h3>
+            </div>
+            <button onclick="closeAllModals()" aria-label="Close modal" class="w-10 h-10 flex items-center justify-center text-text-muted hover:text-volt active:scale-95 transition-colors focus:outline-none -mr-2">
+                <svg class="w-6 h-6 stroke-current stroke-2" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Form (with 16px min mobile text size to avoid zoom) -->
+        <form id="lead-form" onsubmit="handleFormSubmission(event)" class="space-y-4">
+            <div>
+                <label for="lead-program" class="block text-[11px] font-mono uppercase tracking-wider text-text-muted mb-1.5">Selected Program / Tier</label>
+                <select id="lead-program" class="w-full bg-obsidian border border-white/15 px-3.5 sm:px-4 py-3 text-sm sm:text-xs font-mono text-titanium focus:outline-none focus:border-volt">
+                    <option value="Performance Tier (₹4,999/mo)">PERFORMANCE TIER — ₹4,999/mo (Full 24/7 Access)</option>
+                    <option value="Starter Tier (₹2,499/mo)">STARTER TIER — ₹2,499/mo (Off-Peak)</option>
+                    <option value="Elite Concierge (₹8,999/mo)">ELITE CONCIERGE — ₹8,999/mo (1-on-1 Coach)</option>
+                    <option value="7-Day Performance Trial (Free)">7-DAY TRIAL PASS (Complimentary)</option>
+                    <option value="1-on-1 Strength Consultation">1-on-1 STRENGTH COACHING INQUIRY</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="lead-name" class="block text-[11px] font-mono uppercase tracking-wider text-text-muted mb-1.5">Full Name *</label>
+                    <input type="text" id="lead-name" placeholder="Johnathan Doe" required class="w-full bg-obsidian border border-white/15 px-3.5 sm:px-4 py-3 text-base sm:text-xs text-titanium focus:outline-none focus:border-volt placeholder:text-zinc-600" />
+                </div>
+                <div>
+                    <label for="lead-phone" class="block text-[11px] font-mono uppercase tracking-wider text-text-muted mb-1.5">Mobile Number *</label>
+                    <input type="tel" id="lead-phone" placeholder="+91 98..." required class="w-full bg-obsidian border border-white/15 px-3.5 sm:px-4 py-3 text-base sm:text-xs text-titanium focus:outline-none focus:border-volt placeholder:text-zinc-600" />
+                </div>
+            </div>
+
+            <div>
+                <label for="lead-email" class="block text-[11px] font-mono uppercase tracking-wider text-text-muted mb-1.5">Email Address *</label>
+                <input type="email" id="lead-email" placeholder="athlete@domain.com" required class="w-full bg-obsidian border border-white/15 px-3.5 sm:px-4 py-3 text-base sm:text-xs text-titanium focus:outline-none focus:border-volt placeholder:text-zinc-600" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="lead-goal" class="block text-[11px] font-mono uppercase tracking-wider text-text-muted mb-1.5">Primary Focus</label>
+                    <select id="lead-goal" class="w-full bg-obsidian border border-white/15 px-3.5 sm:px-4 py-3 text-sm sm:text-xs text-titanium focus:outline-none focus:border-volt">
+                        <option value="Raw Barbell Strength">Raw Barbell Strength</option>
+                        <option value="Muscle Hypertrophy & Density">Muscle Hypertrophy</option>
+                        <option value="Metabolic Conditioning">Conditioning & Stamina</option>
+                        <option value="Athletic Speed & Agility">Athletic Speed / Agility</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="lead-experience" class="block text-[11px] font-mono uppercase tracking-wider text-text-muted mb-1.5">Lifting History</label>
+                    <select id="lead-experience" class="w-full bg-obsidian border border-white/15 px-3.5 sm:px-4 py-3 text-sm sm:text-xs text-titanium focus:outline-none focus:border-volt">
+                        <option value="Beginner (< 1 year)">Beginner (< 1 Year)</option>
+                        <option value="Intermediate (1-3 years)">Intermediate (1–3 Years)</option>
+                        <option value="Advanced (4+ years)">Advanced (4+ Years)</option>
+                        <option value="Competitive Athlete">Competitive Athlete</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pt-3 sm:pt-4">
+                <button type="submit" class="min-h-[50px] w-full py-4 bg-volt text-obsidian font-display text-xl sm:text-2xl uppercase tracking-wider hover:bg-volt-glow transition-all transform -skew-x-3 shadow-lg shadow-volt/20 active:scale-[0.98]">
+                    <span class="inline-block transform skew-x-3" id="form-submit-text">SUBMIT & GENERATE ATHLETE PASS</span>
+                </button>
+                <p class="text-[10px] font-mono text-text-muted text-center mt-2.5 sm:mt-3">
+                    Instant access code generation. Verified via SMS. No recurring billing lock-in.
+                </p>
+            </div>
+        </form>
+
+        <!-- Dynamic Success State Ticket -->
+        <div id="modal-success" class="hidden text-center py-4 sm:py-6">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto bg-volt/20 border-2 border-volt text-volt flex items-center justify-center font-display text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+                &check;
+            </div>
+            <span class="text-xs font-mono uppercase text-volt tracking-widest block mb-1">REGISTRATION CONFIRMED</span>
+            <h4 class="font-display text-3xl sm:text-4xl text-titanium uppercase mb-2 sm:mb-3">ACCESS PASS ISSUED</h4>
+            
+            <div class="bg-obsidian border border-volt/40 p-4 sm:p-6 my-4 sm:my-6 text-left font-mono text-xs space-y-2 relative">
+                <div class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-text-muted">PASS CODE:</span>
+                    <span class="text-volt font-bold text-sm tracking-wider" id="ticket-code">FORGE-BKC-8924</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-text-muted">ATHLETE:</span>
+                    <span class="text-titanium font-bold" id="ticket-name">Vikram Joshi</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-text-muted">TIER / ACCESS:</span>
+                    <span class="text-titanium" id="ticket-tier">Performance Tier</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-text-muted">LOCATION:</span>
+                    <span class="text-titanium">BKC Compound &middot; 24/7 Gate</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-text-muted leading-relaxed mb-5 sm:mb-6 font-normal">
+                Present this barcode at the front desk or show the confirmation message sent to your WhatsApp. Our head coach will receive you for orientation.
+            </p>
+
+            <button onclick="closeAllModals()" class="min-h-[44px] w-full sm:w-auto px-8 py-3 bg-volt text-obsidian font-bold text-xs uppercase tracking-wider hover:bg-volt-glow active:scale-[0.98]">
+                Done & Return To Compound
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Quick Toast Notification -->
+    <div id="toast" class="fixed bottom-20 md:bottom-6 right-4 sm:right-6 z-50 bg-obsidian-card border border-volt text-titanium px-5 sm:px-6 py-3.5 sm:py-4 shadow-2xl transition-all duration-300 transform translate-y-16 opacity-0 pointer-events-none flex items-center gap-3 font-mono text-xs">
+        <span class="w-2 h-2 rounded-full bg-volt animate-ping shrink-0"></span>
+        <span id="toast-text">Update notification</span>
+    </div>
+
+    <script>
+        // 1. Sticky Navigation Blur & Mobile Bottom Dock Visibility
+        const siteHeader = document.getElementById('site-header');
+        const mobileDock = document.getElementById('mobile-dock');
+        const heroSection = document.getElementById('hero');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            // Nav header blur toggle
+            if (scrollY > 30) {
+                siteHeader.classList.add('header-scrolled');
+            } else {
+                siteHeader.classList.remove('header-scrolled');
+            }
+
+            // Mobile action dock appears after scrolling past hero
+            if (heroSection) {
+                const heroBottom = heroSection.offsetHeight - 150;
+                if (scrollY > heroBottom) {
+                    mobileDock.classList.remove('translate-y-full');
+                    mobileDock.classList.add('translate-y-0');
+                } else {
+                    mobileDock.classList.add('translate-y-full');
+                    mobileDock.classList.remove('translate-y-0');
+                }
+            }
+        });
+
+        // 2. Mobile Navigation Toggle
+        let isMobileNavOpen = false;
+        const mobileNav = document.getElementById('mobile-nav');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        function toggleMobileNav() {
+            isMobileNavOpen = !isMobileNavOpen;
+            if (isMobileNavOpen) {
+                mobileNav.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                mobileNav.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                iconMenu.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileNav.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                mobileNav.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close mobile drawer on outside touch / esc key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (isMobileNavOpen) toggleMobileNav();
+                closeAllModals();
+            }
+        });
+
+        // 3. Facility Zone Filter
+        function filterFacilityZone(zone) {
+            const items = document.querySelectorAll('.facility-item');
+            const tabs = document.querySelectorAll('.zone-tab');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-volt', 'text-obsidian', 'font-bold');
+                tab.classList.add('bg-obsidian-card', 'border', 'border-white/10', 'text-text-muted');
+            });
+
+            const activeTab = document.getElementById(`zone-btn-${zone}`);
+            if (activeTab) {
+                activeTab.classList.remove('bg-obsidian-card', 'border', 'border-white/10', 'text-text-muted');
+                activeTab.classList.add('bg-volt', 'text-obsidian', 'font-bold');
+            }
+
+            items.forEach(item => {
+                if (zone === 'all' || item.dataset.zone === zone) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 4. Billing Cycle Switcher (Monthly vs Quarterly -15%)
+        function setBillingCycle(cycle) {
+            const btnMonthly = document.getElementById('bill-monthly');
+            const btnQuarterly = document.getElementById('bill-quarterly');
+            const priceElements = document.querySelectorAll('.price-val');
+
+            if (cycle === 'monthly') {
+                btnMonthly.classList.add('bg-volt', 'text-obsidian', 'font-bold');
+                btnMonthly.classList.remove('text-text-muted');
+                btnQuarterly.classList.remove('bg-volt', 'text-obsidian', 'font-bold');
+                btnQuarterly.classList.add('text-text-muted');
+
+                priceElements.forEach(el => {
+                    el.textContent = '₹' + el.dataset.monthly;
+                });
+            } else {
+                btnQuarterly.classList.add('bg-volt', 'text-obsidian', 'font-bold');
+                btnQuarterly.classList.remove('text-text-muted');
+                btnMonthly.classList.remove('bg-volt', 'text-obsidian', 'font-bold');
+                btnMonthly.classList.add('text-text-muted');
+
+                priceElements.forEach(el => {
+                    el.textContent = '₹' + el.dataset.quarterly;
+                });
+            }
+        }
+
+        // 5. Modal Handling Logic
+        const overlay = document.getElementById('modal-overlay');
+        const modal = document.getElementById('action-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalEyebrow = document.getElementById('modal-eyebrow');
+        const programSelect = document.getElementById('lead-program');
+        const leadForm = document.getElementById('lead-form');
+        const modalSuccess = document.getElementById('modal-success');
+
+        function openModalCommon() {
+            leadForm.classList.remove('hidden');
+            modalSuccess.classList.add('hidden');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
+            modal.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+            modal.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAllModals() {
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            modal.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+            modal.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
+            document.body.style.overflow = '';
+        }
+
+        function openMembershipModal(tierName) {
+            modalEyebrow.textContent = 'MEMBERSHIP ADMISSION';
+            modalTitle.textContent = `JOIN ${tierName.toUpperCase()} TIER`;
+            for (let i = 0; i < programSelect.options.length; i++) {
+                if (programSelect.options[i].value.toLowerCase().includes(tierName.toLowerCase())) {
+                    programSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            openModalCommon();
+        }
+
+        function openTrialModal(trialType) {
+            modalEyebrow.textContent = 'COMPLIMENTARY PASS';
+            modalTitle.textContent = trialType.toUpperCase();
+            for (let i = 0; i < programSelect.options.length; i++) {
+                if (programSelect.options[i].value.toLowerCase().includes('trial') || programSelect.options[i].value.toLowerCase().includes('7-day')) {
+                    programSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            openModalCommon();
+        }
+
+        function openCoachBooking(coachName) {
+            modalEyebrow.textContent = 'COACHING ROSTER';
+            modalTitle.textContent = `ROSTER: ${coachName.toUpperCase()}`;
+            programSelect.selectedIndex = 4; // 1-on-1 coaching inquiry
+            openModalCommon();
+        }
+
+        function openProgramDetails(programName) {
+            openTrialModal(`INSPECT: ${programName}`);
+        }
+
+        function handleFormSubmission(e) {
+            e.preventDefault();
+            const athleteName = document.getElementById('lead-name').value;
+            const chosenProgram = programSelect.value;
+            
+            // Random unique ticket pass number
+            const randomCode = 'FORGE-BKC-' + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('ticket-code').textContent = randomCode;
+            document.getElementById('ticket-name').textContent = athleteName;
+            document.getElementById('ticket-tier').textContent = chosenProgram;
+
+            // Transition from form to ticket preview
+            leadForm.classList.add('hidden');
+            modalSuccess.classList.remove('hidden');
+
+            showToast(`Access pass ${randomCode} generated.`);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-text').textContent = msg;
+            toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
